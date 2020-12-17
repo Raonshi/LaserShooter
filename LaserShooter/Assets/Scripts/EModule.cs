@@ -20,7 +20,7 @@ public class EModule
         switch (type)
         {
             case Type.Enemy1:
-                MoveSpeed = 1f;
+                MoveSpeed = 0.5f;
                 break;
             case Type.Enemy2:
                 MoveSpeed = 2f;

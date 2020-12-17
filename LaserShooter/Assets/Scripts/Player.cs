@@ -14,19 +14,26 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Attack();
+        
     }
 
-    void Attack()
+    public void LAttack()
     {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+        Debug.Log("Left Attack");
+    }
 
+    public void RAttack()
+    {
+        transform.rotation = Quaternion.Euler(0, 0, 180);
+        Debug.Log("Right Attack");
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Enemy"))
-        {
-            Debug.Log("게임 오버");
-        }
+        //if(other.gameObject.CompareTag("Enemy"))
+        //{
+        //    Debug.Log("게임 오버");
+        //}
     }
 }
